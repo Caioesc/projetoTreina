@@ -1,23 +1,21 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css'
+import './App.css';
 import MyNavBar from './components/MyNavBar/MyNavBar';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import './components/MyCSS.css';
-import MyInformationsForm from './components/MyInformationsForm/MyInformationsForm';
-import MyEducationForm from './components/MyEducationForm/MyEducationForm';
-import MyExperiencesForm from './components/MyExperiencesForm/MyExperiencesForm';
-import MyAditionalForm from './components/MyAditionalForm/MyAditionalForm';
+import MyEditarCurriculo from './components/MyEditarCurriculo/MyEditarCurriculo';
+import MyExibirCurriculo from './components/MyExibirCurriculo/MyExibirCurriculo';
 
 function App() {
-
   return (
-    <>
-      <MyNavBar></MyNavBar>
-      <MyInformationsForm></MyInformationsForm>
-      <MyEducationForm></MyEducationForm>
-      <MyExperiencesForm></MyExperiencesForm>
-      <MyAditionalForm></MyAditionalForm>
-    </>
+    <Router>
+      <MyNavBar />
+      <Routes>
+        <Route path="/" element={<MyEditarCurriculo />} />
+        <Route path="/editar-curriculo" element={<MyEditarCurriculo />} />
+        <Route path="/exibir-curriculo" element={<MyExibirCurriculo />} />
+      </Routes>
+    </Router>
   );
 }
 
