@@ -2,22 +2,32 @@ package com.backend.springapi.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
 public class User {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
     private String telefone;
     private String rua;
-    private int numero;
+    private String numero;
     private String bairro;
-    private int cep;
+    private String cep;
     private String cidade;
     private String uf;
+    private String funcao;
+    private String empresa;
+    private String anoInicioFim;
+    private String tipo;
+    private String curso;
+    private String instituicao;
+    private String anoFormacao;
+    private String redeSocial;
+    private String linkRedeSocial;
 
     public Long getId() {
         return id;
@@ -51,11 +61,11 @@ public class User {
         this.rua = rua;
     }
 
-    public int getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 
@@ -67,11 +77,11 @@ public class User {
         this.bairro = bairro;
     }
 
-    public int getCep() {
+    public String getCep() {
         return cep;
     }
 
-    public void setCep(int cep) {
+    public void setCep(String cep) {
         this.cep = cep;
     }
 
@@ -91,4 +101,75 @@ public class User {
         this.uf = uf;
     }
 
+    public String getFuncao() {
+        return funcao;
+    }
+
+    public void setFuncao(String funcao) {
+        this.funcao = funcao;
+    }
+
+    public String getEmpresa() {
+        return empresa;
+    }
+
+    public void setEmpresa(String empresa) {
+        this.empresa = empresa;
+    }
+
+    public String getAnoInicioFim() {
+        return anoInicioFim;
+    }
+
+    public void setAnoInicioFim(String anoInicioFim) {
+        this.anoInicioFim = anoInicioFim;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public String getCurso() {
+        return curso;
+    }
+
+    public void setCurso(String curso) {
+        this.curso = curso;
+    }
+
+    public String getInstituicao() {
+        return instituicao;
+    }
+
+    public void setInstituicao(String instituicao) {
+        this.instituicao = instituicao;
+    }
+
+    public String getAnoFormacao() {
+        return anoFormacao;
+    }
+
+    public void setAnoFormacao(String anoFormacao) {
+        this.anoFormacao = anoFormacao;
+    }
+
+    public String getRedeSocial() {
+        return redeSocial;
+    }
+
+    public void setRedeSocial(String redeSocial) {
+        this.redeSocial = redeSocial;
+    }
+
+    public String getLinkRedeSocial() {
+        return linkRedeSocial;
+    }
+
+    public void setLinkRedeSocial(String linkRedeSocial) {
+        this.linkRedeSocial = linkRedeSocial;
+    }
 }
