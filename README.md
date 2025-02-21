@@ -53,9 +53,11 @@ O frontend foi desenvolvido utilizando **React** e permite que os usuários pree
 
 ### 🖼️ Captura de Tela
 
-| Tela Inicial |
-| ------------ |
-| ![Home](frontend\src\assets\avatar.png)|
+| Telas |
+| ------|
+| ![Tela de edição](frontend/public/imagens/PrintFrontEnd2.png)|
+| ![Tela de exibição](frontend/public/imagens/PrintFrontEnd.png)|
+
 
 ### ✅ 1. Pré-requisitos
 
